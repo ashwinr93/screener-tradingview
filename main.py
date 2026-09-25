@@ -1,11 +1,14 @@
 import pandas as pd
 import numpy as np
+from pathlib import Path
 
 # --- File Paths ---
 # Define file paths for clarity and easier modification
-SCREENER_PATH = '/Users/ashwinraghavan/Downloads/query-results.csv'
-BSE_MAPPING_PATH = 'bse_mapping.csv'
-OUTPUT_PATH = '/Users/ashwinraghavan/Downloads/Weekend.txt'
+# The screener.in export is read from your Downloads folder, and the watchlist is written there too
+DOWNLOADS = Path.home() / 'Downloads'
+SCREENER_PATH = DOWNLOADS / 'query-results.csv'
+BSE_MAPPING_PATH = Path(__file__).parent / 'bse_mapping.csv'
+OUTPUT_PATH = DOWNLOADS / 'Weekend.txt'
 
 # --- Step 1: Read and Prepare Screener Data ---
 # Read the main data. Specify 'BSE Code' as string to prevent float/merge errors.

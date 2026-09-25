@@ -1,4 +1,4 @@
-The file locations are hardcoded. 
+Export your screen from screener.in as CSV; the script reads it from your Downloads folder (query-results.csv) and writes Weekend.txt there.
 
 You will need to update the bse_mapping file manually from time to time for the most updated list of stocks listed on BSE. 
 
